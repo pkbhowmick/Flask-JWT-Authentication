@@ -35,7 +35,6 @@ def protected():
     return jsonify({"message" : 'This is protected. Anyone with valid token can view'})
 
 @app.route('/login')
-@token_required
 def login():
     auth = request.authorization
     if auth and auth.password == 'password':
