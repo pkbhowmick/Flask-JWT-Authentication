@@ -1,5 +1,8 @@
 # Flask Api for storing face embeddings in mongodb
 
+# For model : 
+- https://drive.google.com/drive/folders/1pwQ3H4aJ8a6yyJHZkTwtjcL4wYWQb7bn
+
 # For checking with postman
 
 ### Register(POST)
