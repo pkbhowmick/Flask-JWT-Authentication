@@ -132,6 +132,53 @@ def post():
         return jsonify({"message" : "Your Face Embeddings already existed"})
 
 
+@app.route('/parse_nid',methods=['GET','POST'])
+# @token_required
+def parseNid():
+    return jsonify({
+                    "nid": 199212345672,
+                    "dob": "01-10-1990",
+                    "name": "Hasan Mahmud",
+                    "bengali_name": "হাসান মাহমুদ",
+                    "fathers_name": "কাজি  আমানুল্লাহ  মিয়া ",
+                    "mothers_name": "আখতার বানু",
+                    "error": None})
+
+@app.route('/facce_verification',methods=['GET','POST'])
+# @token_required
+def faceVerification():
+    return jsonify({
+    "status": "matched",
+    "description": "log of face part mach",
+    "error": None
+})
+
+@app.route('/insert_nid_info',methods=['GET','POST'])
+# @token_required
+def insertNidInfo():
+    return jsonify({
+                "status": True,
+                "error": None
+                })
+
+@app.route('/verify_nid_data',methods=['GET','POST'])
+# @token_required
+def verifyNidData():
+    return jsonify({
+            "status": True,
+            "error": None
+            })
+
+@app.route('/generate_otp',methods=['GET','POST'])
+# @token_required
+def generateOtp():
+    return jsonify({
+            "otp": "1569",
+            "expiration": 1585280243601,
+            "error": None
+            })
+
+
 #api.add_resource(FaceById,"/faceid/<string:userId>")
 
 if __name__ == '__main__':
