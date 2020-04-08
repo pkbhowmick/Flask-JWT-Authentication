@@ -178,6 +178,14 @@ def generateOtp():
             "error": None
             })
 
+@app.route('/save_pin',methods=['GET','POST'])
+# @token_required
+def savePin():
+    return jsonify({
+            "status": True,
+            "error": None
+            })
+
 
 #api.add_resource(FaceById,"/faceid/<string:userId>")
 
